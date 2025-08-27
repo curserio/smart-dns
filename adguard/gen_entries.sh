@@ -43,9 +43,9 @@ for domain in "${DOMAINS_ORDER[@]}"; do
   fi
 done
 
-# --- AdGuard rewrites ---
+# --- Adguard rewrites ---
 echo
-echo "### --- AdGuard rewrites ---"
+echo "### --- Adguard rewrites ---"
 echo "  rewrites:"
 for domain in "${DOMAINS_ORDER[@]}"; do
   [[ -z "$domain" ]] && continue
