@@ -1,0 +1,16 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "9443:443/tcp"   # DoH и веб-интерфейс админки (HTTPS)
+      - "853:853/tcp"    # DoT
+      - "3000:3000/tcp"  # мастер-страница настройки
+      - "8080:80/tcp"    # веб-интерфейс админки
+    volumes:
+      - ./work:/opt/adguardhome/work
+      - ./conf:/opt/adguardhome/conf
+      - ../nginx/certs:/opt/certs
