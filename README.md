@@ -54,7 +54,7 @@ smart-dns/
    - ../nginx/certs:/opt/certs
    ```
 
-   Подробности по AdGuard Home — [на docker hub](https://hub.docker.com/r/adguard/adguardhome).
+   Подробности по Adguard Home — [на docker hub](https://hub.docker.com/r/adguard/adguardhome).
 
 3. Запустите Adguard Home:
 
@@ -97,6 +97,4 @@ smart-dns/
   Для этого добавьте домен в `map` (например, `one.example.com 127.0.0.1:8443;`)
   и настройте отдельный `server` с проксированием на порт `8443`.
 * Поддерживаются зашифрованные DNS (DoH/DoT).
-* AdGuard Home даёт бонусом блокировку рекламы и трекеров.
-
-```
+* Adguard Home даёт бонусом блокировку рекламы и трекеров.
